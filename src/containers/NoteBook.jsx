@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import WeeklyLog from "../components/WeeklyLog/WeeklyLog.jsx";
 
 class NoteBook extends Component {
   state = {};
@@ -6,6 +7,7 @@ class NoteBook extends Component {
     return (
       <div>
         <div>Bullet Journal</div>
+        <WeeklyLog />
       </div>
     );
   }

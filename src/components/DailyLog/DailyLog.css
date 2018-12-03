@@ -1,0 +1,7 @@
+.container {
+  padding: 10px;
+  margin: 5% 25%;
+  /* height: 150px; */
+  box-sizing: border-box;
+  border: 1px solid black;
+}

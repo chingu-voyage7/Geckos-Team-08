@@ -1,0 +1,9 @@
+li {
+  text-align: left;
+  list-style-type: none;
+}
+
+li:hover {
+  background-color: rgb(181, 227, 245);
+  cursor: pointer;
+}

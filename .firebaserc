@@ -1,5 +1,6 @@
 {
   "projects": {
-    "staging": "geckos-note-app"
+    "staging": "geckos-note-app",
+    "default": "geckos-note-app"
   }
 }

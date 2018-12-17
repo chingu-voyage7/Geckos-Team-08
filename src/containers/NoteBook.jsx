@@ -10,7 +10,6 @@ class NoteBook extends Component {
     return (
       <React.Fragment>
         <div>
-          <DailyLog />
           <WeeklyLog />
         </div>
       </React.Fragment>

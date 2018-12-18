@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "moment": "^2.22.2",
+    "bootstrap": "4.1.1",
+    "firebase": "^5.7.0",
+    "moment": "^2.23.0",
     "react": "^16.6.3",
     "react-contenteditable": "^3.2.2",
     "react-dom": "^16.6.3",

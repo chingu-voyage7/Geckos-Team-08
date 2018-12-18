@@ -6,8 +6,8 @@ import moment from 'moment';
 class WeeklyLog extends Component {
   state = { 
     notes:[],
-    weekStart: 0,
-    weekEnd: 0,
+    weekStart: null,
+    weekEnd: null,
     user: null
   }
   logout() {
@@ -29,11 +29,15 @@ class WeeklyLog extends Component {
       });
     };
   componentWillMount() {
+    let sunday = moment.utc().startOf('week');
+    let saturday = moment.utc().endOf('week');
+    let sundayEst = new Date(sunday + 18000000).getTime();
+    this.setState( { weekStart: sunday, weekEnd: saturday } );
     auth.onAuthStateChanged((user) => { 
       if (user) {
         this.setState({ user });
          
-    let getNotes = fire.database().ref(`notes/${this.state.user.uid}`);
+    let getNotes = fire.database().ref(`notes/${this.state.user.uid}`).orderByChild('date').startAt(sundayEst);
     getNotes.on('value', snapshot => {
       /* Update React state when message is added at Firebase Database */
       let notes = snapshot.val();
@@ -52,9 +56,6 @@ class WeeklyLog extends Component {
     })
       } 
     });
-    let sunday = moment().startOf('week');
-    let saturday = moment().endOf('week');
-    this.setState( { weekStart: sunday, weekEnd: saturday } );
    
   }
   addNote(e) {

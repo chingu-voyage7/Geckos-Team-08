@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Note from '../Note/Note.js';
 import moment from 'moment';
+import './WeeklyLog.css'
 
 class WeeklyLog extends Component {
   state = { 
@@ -16,7 +17,7 @@ class WeeklyLog extends Component {
   }
   render() { 
     return (
-      <div> 
+      <div className="notes-box"> 
         {
           this.props.notes.map(note => { return(
             <Note key={note.id} text={note.text} />

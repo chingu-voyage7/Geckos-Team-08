@@ -4,12 +4,12 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4.1.1",
-    "firebase": "^5.7.0",
+    "firebase": "^12.9.0",
     "moment": "^2.23.0",
     "react": "^16.6.3",
     "react-contenteditable": "^3.2.2",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
